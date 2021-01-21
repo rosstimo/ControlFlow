@@ -55,15 +55,14 @@ Module ControlFlow
             problem = True
         End Try
 
-
-        If problem Then
+        If problem = True Then
+            Console.Clear()
             Console.WriteLine("Sorry try again later...")
             Console.WriteLine("Have a nice day...")
         Else
             'otherwise do the math and display the result
             Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}")
         End If
-
 
         Console.Read()
 
