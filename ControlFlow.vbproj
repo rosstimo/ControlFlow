@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D7B06825-E27F-43EC-A315-DD50730A2645}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ControlFlow.SelectCaseExample</StartupObject>
+    <StartupObject>ControlFlow.ControlFlow</StartupObject>
     <RootNamespace>ControlFlow</RootNamespace>
     <AssemblyName>ControlFlow</AssemblyName>
     <FileAlignment>512</FileAlignment>

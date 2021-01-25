@@ -1,6 +1,6 @@
 ﻿Option Explicit On
 Option Strict On
-Option Compare Binary
+Option Compare Text
 
 Module ControlFlow
 
@@ -26,8 +26,6 @@ Module ControlFlow
         'Console.WriteLine($"you typed {userInput}")
 
 
-
-
         'Dim firstNumber As String
         'Dim secondNumber As String
         'Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
@@ -35,18 +33,23 @@ Module ControlFlow
         Dim firstNumber As Integer
         Dim secondNumber As Integer
         Dim userInput As String
-        Dim problem As Boolean = False
+        Dim problem As Boolean = True
 
-        Console.WriteLine("enter a number")
-        Try
-            userInput = Console.ReadLine()
-            firstNumber = CInt(userInput)
-        Catch e As Exception
-            Console.WriteLine($"I need a number. you entered {userInput}")
-            problem = True
-        End Try
+        Console.WriteLine("enter ""Q"" anytime to quit")
+        While problem = True And userInput <> "Q" 'And userInput <> "q"
+            Console.WriteLine("enter the first number")
+            Try
+                userInput = Console.ReadLine()
+                firstNumber = CInt(userInput)
+                problem = False
+            Catch e As Exception
+                Console.WriteLine($"I need a number. you entered {userInput}")
+                problem = True
+            End Try
+        End While
 
-        Console.WriteLine("enter a number")
+
+        Console.WriteLine("enter the second number")
         Try
             userInput = Console.ReadLine()
             secondNumber = CInt(userInput)
