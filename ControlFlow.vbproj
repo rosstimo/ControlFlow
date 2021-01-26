@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D7B06825-E27F-43EC-A315-DD50730A2645}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ControlFlow.ControlFlow</StartupObject>
+    <StartupObject>ControlFlow.FormatOutput</StartupObject>
     <RootNamespace>ControlFlow</RootNamespace>
     <AssemblyName>ControlFlow</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlFlow.vb" />
+    <Compile Include="FormatOutput.vb" />
     <Compile Include="LoopExamples.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
