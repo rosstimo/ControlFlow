@@ -48,19 +48,23 @@ Module ControlFlow
             End Try
         End While
 
+        problem = True
 
         Console.WriteLine("enter the second number")
-        Try
-            userInput = Console.ReadLine()
-            secondNumber = CInt(userInput)
-        Catch e As Exception
-            Console.WriteLine($"I need a number. you entered {userInput}")
-            problem = True
-        End Try
+        While problem = True And userInput <> "Q" 'And userInput <> "q"
+            Try
+                userInput = Console.ReadLine()
+                secondNumber = CInt(userInput)
+                problem = False
+            Catch e As Exception
+                Console.WriteLine($"I need a number. you entered {userInput}")
+                problem = True
+            End Try
+        End While
 
         If problem = True Then
             Console.Clear()
-            Console.WriteLine("Sorry try again later...")
+            'Console.WriteLine("Sorry try again later...")
             Console.WriteLine("Have a nice day...")
         Else
             'otherwise do the math and display the result
